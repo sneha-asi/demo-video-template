@@ -1,0 +1,29 @@
+{
+  "name": "demo-video-template",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npx remotion studio",
+    "render": "npm run doctor && npx remotion render Demo out/demo-v1.mp4",
+    "render:skip-doctor": "npx remotion render Demo out/demo-v1.mp4",
+    "still": "npx remotion still Demo --frame=30 out/still.jpg",
+    "doctor": "npx -y tsx scripts/doctor.ts",
+    "transcribe": "npx -y tsx scripts/transcribe-vo.ts",
+    "lip-sync": "npx -y tsx scripts/lip-sync-check.ts",
+    "transition": "npx -y tsx scripts/make-transition.ts",
+    "new-video": "npx -y tsx scripts/new-video.ts",
+    "pick-music": "npx -y tsx scripts/pick-music.ts"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.448",
+    "remotion": "4.0.448",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.0.0"
+  }
+}
